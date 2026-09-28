@@ -1,0 +1,222 @@
+﻿{
+    "name":  "CloudStream Converted Plugins",
+    "description":  "17 plugins converted from CloudStream 3 Kotlin to SkyStream TypeScript. French, German, and Universal providers.",
+    "manifestVersion":  1,
+    "plugins":  [
+                    {
+                        "id":  "french-stream",
+                        "name":  "French-Stream",
+                        "description":  "Movies \u0026 TV series from french-stream.one (FR)",
+                        "version":  "1.0.0",
+                        "lang":  "fr",
+                        "types":  [
+                                      "movie",
+                                      "tvseries"
+                                  ],
+                        "baseUrl":  "https://french-stream.one",
+                        "scriptUrl":  "https://raw.githubusercontent.com/anima09world-svg/REPO/main/dist/FrenchStream.js"
+                    },
+                    {
+                        "id":  "french-manga",
+                        "name":  "French-Manga",
+                        "description":  "French dubbed \u0026 subbed anime from french-manga.net",
+                        "version":  "1.0.0",
+                        "lang":  "fr",
+                        "types":  [
+                                      "anime"
+                                  ],
+                        "baseUrl":  "https://w16.french-manga.net",
+                        "scriptUrl":  "https://raw.githubusercontent.com/anima09world-svg/REPO/main/dist/FrenchManga.js"
+                    },
+                    {
+                        "id":  "fstv",
+                        "name":  "French-Stream TV",
+                        "description":  "French live TV channels from fstv.rest",
+                        "version":  "1.0.0",
+                        "lang":  "fr",
+                        "types":  [
+                                      "live"
+                                  ],
+                        "baseUrl":  "https://fstv.rest",
+                        "scriptUrl":  "https://raw.githubusercontent.com/anima09world-svg/REPO/main/dist/FSTV.js"
+                    },
+                    {
+                        "id":  "movix",
+                        "name":  "Movix",
+                        "description":  "French movies \u0026 series from movix.date",
+                        "version":  "1.0.0",
+                        "lang":  "fr",
+                        "types":  [
+                                      "movie",
+                                      "tvseries"
+                                  ],
+                        "baseUrl":  "https://movix.date",
+                        "scriptUrl":  "https://raw.githubusercontent.com/anima09world-svg/REPO/main/dist/Movix.js"
+                    },
+                    {
+                        "id":  "youtube",
+                        "name":  "YouTube",
+                        "description":  "YouTube trending \u0026 search via public endpoints",
+                        "version":  "1.0.0",
+                        "lang":  "uni",
+                        "types":  [
+                                      "video",
+                                      "live"
+                                  ],
+                        "baseUrl":  "https://www.youtube.com",
+                        "scriptUrl":  "https://raw.githubusercontent.com/anima09world-svg/REPO/main/dist/YouTube.js"
+                    },
+                    {
+                        "id":  "dailymotion",
+                        "name":  "Dailymotion",
+                        "description":  "Videos from Dailymotion public API",
+                        "version":  "1.0.0",
+                        "lang":  "uni",
+                        "types":  [
+                                      "video"
+                                  ],
+                        "baseUrl":  "https://www.dailymotion.com",
+                        "scriptUrl":  "https://raw.githubusercontent.com/anima09world-svg/REPO/main/dist/Dailymotion.js"
+                    },
+                    {
+                        "id":  "invidious",
+                        "name":  "Invidious",
+                        "description":  "Privacy-friendly YouTube frontend via Invidious API",
+                        "version":  "1.0.0",
+                        "lang":  "uni",
+                        "types":  [
+                                      "video"
+                                  ],
+                        "baseUrl":  "https://inv.nadeko.net",
+                        "scriptUrl":  "https://raw.githubusercontent.com/anima09world-svg/REPO/main/dist/Invidious.js"
+                    },
+                    {
+                        "id":  "twitch",
+                        "name":  "Twitch",
+                        "description":  "Live Twitch streams via TwitchTracker",
+                        "version":  "1.0.0",
+                        "lang":  "uni",
+                        "types":  [
+                                      "live"
+                                  ],
+                        "baseUrl":  "https://www.twitch.tv",
+                        "scriptUrl":  "https://raw.githubusercontent.com/anima09world-svg/REPO/main/dist/Twitch.js"
+                    },
+                    {
+                        "id":  "internet-archive",
+                        "name":  "Internet Archive",
+                        "description":  "Free public domain movies \u0026 shows from archive.org",
+                        "version":  "1.0.0",
+                        "lang":  "uni",
+                        "types":  [
+                                      "movie",
+                                      "tvseries",
+                                      "video"
+                                  ],
+                        "baseUrl":  "https://archive.org",
+                        "scriptUrl":  "https://raw.githubusercontent.com/anima09world-svg/REPO/main/dist/InternetArchive.js"
+                    },
+                    {
+                        "id":  "aniworld",
+                        "name":  "Aniworld",
+                        "description":  "German subbed/dubbed anime from aniworld.to",
+                        "version":  "1.0.0",
+                        "lang":  "de",
+                        "types":  [
+                                      "anime"
+                                  ],
+                        "baseUrl":  "https://aniworld.to",
+                        "scriptUrl":  "https://raw.githubusercontent.com/anima09world-svg/REPO/main/dist/Aniworld.js"
+                    },
+                    {
+                        "id":  "ard",
+                        "name":  "ARD Mediathek",
+                        "description":  "German public broadcaster ARD on-demand \u0026 live",
+                        "version":  "1.0.0",
+                        "lang":  "de",
+                        "types":  [
+                                      "movie",
+                                      "tvseries",
+                                      "live"
+                                  ],
+                        "baseUrl":  "https://www.ardmediathek.de",
+                        "scriptUrl":  "https://raw.githubusercontent.com/anima09world-svg/REPO/main/dist/ARD.js"
+                    },
+                    {
+                        "id":  "serienstream",
+                        "name":  "Serienstream",
+                        "description":  "German TV series from serienstream.to",
+                        "version":  "1.0.0",
+                        "lang":  "de",
+                        "types":  [
+                                      "tvseries"
+                                  ],
+                        "baseUrl":  "https://serienstream.to",
+                        "scriptUrl":  "https://raw.githubusercontent.com/anima09world-svg/REPO/main/dist/Serienstream.js"
+                    },
+                    {
+                        "id":  "hdfilme",
+                        "name":  "HDFilme",
+                        "description":  "German HD movies from hdfilme.my",
+                        "version":  "1.0.0",
+                        "lang":  "de",
+                        "types":  [
+                                      "movie"
+                                  ],
+                        "baseUrl":  "https://hdfilme.my",
+                        "scriptUrl":  "https://raw.githubusercontent.com/anima09world-svg/REPO/main/dist/HDFilme.js"
+                    },
+                    {
+                        "id":  "kinoger",
+                        "name":  "Kinoger",
+                        "description":  "German movies \u0026 series from kinoger.com",
+                        "version":  "1.0.0",
+                        "lang":  "de",
+                        "types":  [
+                                      "movie",
+                                      "tvseries"
+                                  ],
+                        "baseUrl":  "https://kinoger.com",
+                        "scriptUrl":  "https://raw.githubusercontent.com/anima09world-svg/REPO/main/dist/Kinoger.js"
+                    },
+                    {
+                        "id":  "arte",
+                        "name":  "Arte",
+                        "description":  "European cultural TV via Arte TV API",
+                        "version":  "1.0.0",
+                        "lang":  "de",
+                        "types":  [
+                                      "movie",
+                                      "tvseries"
+                                  ],
+                        "baseUrl":  "https://www.arte.tv",
+                        "scriptUrl":  "https://raw.githubusercontent.com/anima09world-svg/REPO/main/dist/Arte.js"
+                    },
+                    {
+                        "id":  "plutotv",
+                        "name":  "PlutoTV",
+                        "description":  "Free live TV \u0026 on-demand from Pluto TV",
+                        "version":  "1.0.0",
+                        "lang":  "de",
+                        "types":  [
+                                      "movie",
+                                      "tvseries",
+                                      "live"
+                                  ],
+                        "baseUrl":  "https://pluto.tv",
+                        "scriptUrl":  "https://raw.githubusercontent.com/anima09world-svg/REPO/main/dist/PlutoTV.js"
+                    },
+                    {
+                        "id":  "mediaccc",
+                        "name":  "C3TV (MediaCCC)",
+                        "description":  "CCC conference talks from media.ccc.de",
+                        "version":  "1.0.0",
+                        "lang":  "de",
+                        "types":  [
+                                      "video"
+                                  ],
+                        "baseUrl":  "https://media.ccc.de",
+                        "scriptUrl":  "https://raw.githubusercontent.com/anima09world-svg/REPO/main/dist/MediaCCC.js"
+                    }
+                ]
+}

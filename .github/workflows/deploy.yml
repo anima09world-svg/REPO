@@ -1,4 +1,4 @@
-name: Deploy SkyStream Plugin
+name: Build & Deploy SkyStream Plugins
 
 on:
   push:
@@ -7,40 +7,46 @@ on:
       - master
     paths-ignore:
       - '*.md'
+      - 'docs/**'
+  workflow_dispatch:
 
 concurrency:
   group: "deploy"
   cancel-in-progress: true
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
     steps:
       - name: Checkout source
         uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Setup Node.js
+      - name: Setup Node.js 20
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: '20'
           cache: 'npm'
-
-      - name: Install SkyStream CLI
-        run: npm install -g skystream-cli
 
       - name: Install dependencies
         run: npm install
 
-      - name: Deploy plugin (build + generate repo.json + .sky)
-        run: skystream deploy
+      - name: Build all 17 plugins → dist/
+        run: node build.js
 
-      - name: Commit & push build artifacts
+      - name: List built artifacts
+        run: ls -lah dist/
+
+      - name: Commit & push built artifacts
         run: |
           git config --local user.email "actions@github.com"
           git config --local user.name "GitHub Actions"
-          git add -f repo.json plugin.js *.sky 2>/dev/null || true
-          git add -f repo.json plugin.js 2>/dev/null || true
+          git add -f dist/ repo.json
           git diff --staged --quiet && echo "Nothing to commit" || \
-            git commit -m "🚀 Deploy ${GITHUB_SHA::7}" && git push
+            git commit -m "🚀 Build $(date -u +%Y-%m-%dT%H:%M:%SZ) [${GITHUB_SHA::7}]: 17 plugins" && \
+            git push
+

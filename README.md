@@ -1,40 +1,64 @@
-# SkyStream — Mega Repo Plugin
+# CloudStream ? SkyStream Converted Plugins
 
-A SkyStream plugin converted from the original [MegaProvider](https://github.com/recloudstream/cs-repos) CloudStream 3 plugin.
+17 media provider plugins converted from **CloudStream 3 Kotlin** to **SkyStream TypeScript**.
 
-Fetches the community repository database and lets users browse, search, and explore CloudStream-compatible repositories and their plugins directly inside SkyStream.
+## Install
 
-## 📦 Install in SkyStream
-
-Once deployed, open **SkyStream → Extensions → Add Source** and paste:
-
+In SkyStream: **Extensions ? Add Source ?**
 ```
 https://raw.githubusercontent.com/anima09world-svg/REPO/main/repo.json
 ```
 
-## ✨ Features
+---
 
-| Function | Behaviour |
-|---|---|
-| `getHome` | Loads the full repos-db.json — splits repos into **✅ Verified** and **🌐 Community** rows with a hero carousel |
-| `search` | Filter repos by name or URL keyword |
-| `load` | Opens a single repo's `repo.json` and lists every plugin inside it |
-| `loadStreams` | No-op — this is a repository browser, not a media plugin |
+## ???? French Plugins (from cloudstream-frenchstream)
 
-## 🛠 Local Development
+| Plugin | Source | Types |
+|--------|--------|-------|
+| **French-Stream** | french-stream.one | Movie, TvSeries |
+| **French-Manga** | french-manga.net | Anime |
+| **French-Stream TV** | fstv.rest | Live TV |
+| **Movix** | movix.date | Movie, TvSeries |
+
+## ?? Universal Plugins (from recloudstream/extensions)
+
+| Plugin | Source | Types |
+|--------|--------|-------|
+| **YouTube** | youtube.com | Video, Live |
+| **Dailymotion** | dailymotion.com | Video |
+| **Invidious** | inv.nadeko.net | Video |
+| **Twitch** | twitch.tv | Live |
+| **Internet Archive** | archive.org | Movie, Video |
+
+## ???? German Plugins (from bnyro/GermanProviders)
+
+| Plugin | Source | Types |
+|--------|--------|-------|
+| **Aniworld** | aniworld.to | Anime |
+| **ARD Mediathek** | ardmediathek.de | Movie, TvSeries, Live |
+| **Serienstream** | serienstream.to | TvSeries |
+| **HDFilme** | hdfilme.my | Movie |
+| **Kinoger** | kinoger.com | Movie, TvSeries |
+| **Arte** | arte.tv | Movie, TvSeries |
+| **PlutoTV** | pluto.tv | Movie, TvSeries, Live |
+| **C3TV (MediaCCC)** | media.ccc.de | Video |
+
+---
+
+## Build
 
 ```bash
 npm install
-skystream test -f getHome
-skystream test -f search -q "phisher"
-skystream test -f load -q "https://raw.githubusercontent.com/recloudstream/extensions/master/repo.json"
+node build.js
 ```
 
-## 🚀 Deployment
+All 17 plugins compile to `dist/*.js`.
 
-Push to `main` — GitHub Actions automatically runs `skystream deploy` and commits the generated `repo.json` and `.sky` files back to the repo.
+## CI/CD
 
-## Credits
+GitHub Actions automatically builds and commits `dist/` on every push to `main`.
 
-- Original plugin: MegaPlugin.kt by the CloudStream community
-- Repo database: `https://raw.githubusercontent.com/recloudstream/cs-repos/master/repos-db.json`
+---
+
+> **Note:** `cloudstream-extensions-phisher-master.zip` contained documentation only (no Kotlin source files), so no plugin was generated from it.
+
