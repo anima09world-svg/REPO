@@ -1,0 +1,46 @@
+name: Deploy SkyStream Plugin
+
+on:
+  push:
+    branches:
+      - main
+      - master
+    paths-ignore:
+      - '*.md'
+
+concurrency:
+  group: "deploy"
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: Install SkyStream CLI
+        run: npm install -g skystream-cli
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Deploy plugin (build + generate repo.json + .sky)
+        run: skystream deploy
+
+      - name: Commit & push build artifacts
+        run: |
+          git config --local user.email "actions@github.com"
+          git config --local user.name "GitHub Actions"
+          git add -f repo.json plugin.js *.sky 2>/dev/null || true
+          git add -f repo.json plugin.js 2>/dev/null || true
+          git diff --staged --quiet && echo "Nothing to commit" || \
+            git commit -m "🚀 Deploy ${GITHUB_SHA::7}" && git push

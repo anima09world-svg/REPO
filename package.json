@@ -1,0 +1,15 @@
+{
+  "name": "skystream-mega-repo",
+  "version": "1.0.0",
+  "description": "SkyStream conversion of the MegaProvider CloudStream plugin — browses the cs-repos community repository database.",
+  "main": "plugin.js",
+  "scripts": {
+    "build": "esbuild src/index.ts --bundle --platform=node --target=es2020 --outfile=plugin.js",
+    "dev": "skystream test -f getHome"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "esbuild": "^0.20.0",
+    "typescript": "^5.0.0"
+  }
+}

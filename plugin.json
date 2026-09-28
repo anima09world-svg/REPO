@@ -1,0 +1,11 @@
+{
+  "packageName": "com.mega.megarepo",
+  "name": "Mega Repo",
+  "version": "1",
+  "baseUrl": "https://raw.githubusercontent.com/recloudstream/cs-repos/master",
+  "description": "Browses and installs repositories from the CloudStream community repos database. Converted from the MegaProvider CloudStream plugin.",
+  "author": "mega",
+  "language": "en",
+  "iconUrl": "https://raw.githubusercontent.com/recloudstream/cloudstream/master/app/src/main/ic_launcher-playstore.png",
+  "types": ["others"]
+}
